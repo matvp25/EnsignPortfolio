@@ -14,11 +14,10 @@ export default function Home() {
           />
         </div>
         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-          Software engineer, father, and believer
+          The Software Engineer's Journal
         </h1>
         <p className="text-lg leading-relaxed mb-6 max-w-3xl text-gray-600 dark:text-gray-300">
-          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi Lorem ipsum dolor sit amet consectetur
-          adipiscing elit Ut et massa mi.
+          Here are some thoughts I had while learning programming.
         </p>
         {/* Social Links */}
         <div className="flex space-x-4">
