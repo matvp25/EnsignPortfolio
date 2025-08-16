@@ -1,4 +1,3 @@
-// get env variable
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -10,13 +9,28 @@ const nextConfigProd = {
   output: 'export',
   basePath: '/portfolio',
   images: {
-    loader: 'custom',
-    loaderFile: './src/lib/image.loader.js',
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.icons8.com',
+        pathname: '/**',
+      },
+    ],
   },
 };
 
 /** @type {import('next').NextConfig} */
-const nextConfigDev = {};
+const nextConfigDev = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.icons8.com',
+        pathname: '/**',
+      },
+    ],
+  },
+};
 
 const nextConfig = env === 'development' ? nextConfigDev : nextConfigProd;
 

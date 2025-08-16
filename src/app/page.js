@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SignupWidget from "../components/SignupWidget";
 import ArticlesSection from "../components/ArticlesSection";
 
@@ -7,21 +8,26 @@ export default function Home() {
       {/* Profile Section */}
       <div className="container mx-auto mt-8 px-4 max-w-7xl mb-12 text-gray-900 dark:text-white">
         <div className="flex items-center mb-6">
-          <img
+          <Image
             src="/Mateo.JPG"
             alt="Profile"
-            className="w-16 h-16 rounded-full mr-4"
+            width={64}
+            height={64}
+            className="rounded-full mr-4"
           />
         </div>
         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-          The Software Engineer's Journal
+          The Software Engineer&apos;s Journal
         </h1>
         <p className="text-lg leading-relaxed mb-6 max-w-3xl text-gray-600 dark:text-gray-300">
           Here are some thoughts I had while learning programming.
         </p>
         {/* Social Links */}
         <div className="flex space-x-4">
-          <a href="#" className="text-gray-400 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-200">
+          <a
+            href="#"
+            className="text-gray-400 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-200"
+          >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
               <path d="...linkedInPath..." />
             </svg>
@@ -60,9 +66,11 @@ export default function Home() {
                     { name: "Microsoft", years: "2010 - 2011", icon: "microsoft.png" },
                   ].map((job, idx) => (
                     <li key={idx} className="flex items-start">
-                      <img
+                      <Image
                         src={`https://img.icons8.com/color/48/${job.icon}`}
                         alt={job.name}
+                        width={24}
+                        height={24}
                         className="w-6 h-6 mr-3"
                       />
                       <div>
@@ -95,10 +103,12 @@ export default function Home() {
                 ].map((skill, idx) => (
                   <div key={idx}>
                     <div className="flex items-center mb-1">
-                      <img
+                      <Image
                         src={`https://img.icons8.com/color/48/${skill.icon}`}
                         alt={skill.name}
-                        className="w-5 h-5 mr-2"
+                        width={20}
+                        height={20}
+                        className="mr-2"
                       />
                       <span className="text-sm font-medium text-gray-700 dark:text-gray-200">
                         {skill.name}
