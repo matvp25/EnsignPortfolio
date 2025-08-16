@@ -1,5 +1,6 @@
-import SignupWidget from "../components/SignupWidget";
-import ArticlesSection from "../components/ArticlesSection";
+import SignupWidget from "../../components/SignupWidget";
+import ArticlesSection from "../../components/ArticlesSection";
+
 
 export default function Home() {
   return (
